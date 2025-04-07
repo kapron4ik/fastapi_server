@@ -46,10 +46,6 @@ def calculate_nutrition_profile(age, gender, height_cm, weight_kg, activity_leve
     else:
         target_calories = round(tdee)
 
-    # Если цель - похудение, добавляем дефицит калорий
-    if goal == "lose":
-        target_calories = round(target_calories * 0.85)  # 15% дефицит калорий
-
     # Если задан желаемый вес, используем его для расчёта макроэлементов
     if desired_weight:
         # Проверяем состояние здоровья и корректируем норму белка
